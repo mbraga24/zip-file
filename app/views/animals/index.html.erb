@@ -1,0 +1,15 @@
+<h2>Home</h2>
+<div>
+<%= link_to 'Add!', new_animal_path %> |
+<%= link_to 'Download archive', animals_path(format: :zip) %>
+</div>
+<h3>All Dogs</h3>
+<ul>
+  <% @animals.each do |animal| %>
+    <li>
+      <strong>Name:</strong> <%= link_to "#{animal.name}", animal_path(animal.id) %><br>
+      <strong>Age:</strong> <%= animal.age %><br>
+      <strong>Species:</strong> <%= animal.species %>
+    </li>
+  <% end %>
+</ul>

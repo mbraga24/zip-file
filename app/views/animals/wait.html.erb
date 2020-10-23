@@ -1,0 +1,6 @@
+<%= form_tag animals_path, method: :post, multipart: true do %>
+  <%= label_tag 'archive', 'Select archive' %>
+  <%= file_field_tag 'archive' %>
+
+  <%= submit_tag 'Add!' %>
+<% end %>
